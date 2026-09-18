@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#00b4d8" />
+    <meta name="description" content="Code Pro Agency — Bảo trì hệ thống, sớm trở lại" />
+    <meta property="og:description" content="Code Pro Agency — Bảo trì hệ thống, sớm trở lại" />
+    <title>Code Pro Agency | Bảo trì &amp; Nâng cấp trải nghiệm</title>
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/favicon.png"
+        rel="icon" type="image/x-icon" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/favicon.png"
+        rel="shortcut icon" type="image/x-icon" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-57x57.png"
+        rel="apple-touch-icon" sizes="57x57" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-60x60.png"
+        rel="apple-touch-icon" sizes="60x60" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-72x72.png"
+        rel="apple-touch-icon" sizes="72x72" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-76x76.png"
+        rel="apple-touch-icon" sizes="76x76" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-114x114.png"
+        rel="apple-touch-icon" sizes="114x114" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-120x120.png"
+        rel="apple-touch-icon" sizes="120x120" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-144x144.png"
+        rel="apple-touch-icon" sizes="144x144" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-152x152.png"
+        rel="apple-touch-icon" sizes="152x152" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/apple-icon-180x180.png"
+        rel="apple-touch-icon" sizes="180x180" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/android-icon-192x192.png"
+        rel="icon" sizes="192x192" type="image/png" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/favicon-32x32.png"
+        rel="icon" sizes="32x32" type="image/png" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/favicon-96x96.png"
+        rel="icon" sizes="96x96" type="image/png" />
+    <link
+        href="https://cdn.jsdelivr.net/gh/codeprovn/content-delivery-network/code.pro.in/www.code.pro.in/icons/favicon-16x16.png"
+        rel="icon" sizes="16x16" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Winter Color Palette */
+            --purple: #00b4d8;      /* Bright Ice Cyan */
+            --purple-2: #90e0ef;    /* Light Frost Blue */
+            --purple-3: #0077b6;    /* Deep Winter Blue */
+            --accent: #ffffff;      /* Snow White */
+            --bg: #030b14;          /* Dark Winter Night */
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --border: rgba(144, 224, 239, 0.25);
+            --text: #e0f2fe;        /* Icy White */
+            --muted: rgba(224, 242, 254, 0.55);
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Be Vietnam Pro', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ── Background ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 15% 10%, rgba(0, 180, 216, .25) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 85% 80%, rgba(0, 119, 182, .2) 0%, transparent 55%),
+                radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255, 255, 255, .08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* noise grain */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            opacity: .4;
+            pointer-events: none;
+        }
+
+        /* ── Grid lines ── */
+        .grid-lines {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(144, 224, 239, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(144, 224, 239, .05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* ── Layout ── */
+        .wrap {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px 60px;
+            gap: 0;
+        }
+
+        /* ── Logo / Brand ── */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            animation: fadeDown .8s ease both;
+        }
+
+        .brand-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--purple), var(--purple-3));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            color: #fff;
+            box-shadow: 0 0 28px rgba(0, 180, 216, .4);
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            gap: 5px;
+        }
+
+        .brand-name {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: -.3px;
+            color: #fff;
+        }
+
+        .brand-tag {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--purple-2);
+            margin-top: 7px;
+        }
+
+        /* ── Status pill ── */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 180, 216, .1);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--purple-2);
+            margin-bottom: 30px;
+            animation: fadeDown .8s .1s ease both;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--accent);
+            animation: pulse 1.6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
+        /* ── Heading ── */
+        .heading {
+            text-align: center;
+            animation: fadeDown .8s .2s ease both;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 800;
+            font-size: clamp(28px, 5vw, 52px);
+            line-height: 1.45;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        h1 span {
+            background: linear-gradient(90deg, var(--purple-2), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sub {
+            text-align: center;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+            font-weight: 300;
+            max-width: 480px;
+            animation: fadeDown .8s .3s ease both;
+            margin-bottom: 44px;
+        }
+
+        /* ── Countdown ── */
+        .countdown {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 44px;
+            animation: fadeUp .8s .4s ease both;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cd-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 24px 16px;
+            text-align: center;
+            min-width: 80px;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cd-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--purple-2), transparent);
+        }
+
+        .cd-num {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 1;
+            color: #fff;
+            display: block;
+        }
+
+        .cd-label {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 6px;
+            display: block;
+        }
+
+        /* ── Progress ── */
+        .progress-wrap {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 50px;
+            animation: fadeUp .8s .5s ease both;
+        }
+
+        .progress-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .progress-head span:last-child {
+            color: var(--purple-2);
+            font-weight: 600;
+        }
+
+        .progress-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .07);
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 65%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--purple-3), var(--purple-2));
+            box-shadow: 0 0 12px rgba(0, 180, 216, .6);
+            position: relative;
+            animation: fillBar 1.8s .6s cubic-bezier(.4, 0, .2, 1) both;
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0
+            }
+        }
+
+        .progress-glow {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--purple-2);
+            box-shadow: 0 0 10px var(--purple-2);
+        }
+
+        /* ── Feature cards ── */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            width: 100%;
+            max-width: 880px;
+            margin-bottom: 50px;
+            animation: fadeUp .8s .6s ease both;
+        }
+
+        .feat {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 20px;
+            backdrop-filter: blur(10px);
+            transition: border-color .3s, transform .3s, box-shadow .3s;
+        }
+
+        .feat:hover {
+            border-color: rgba(144, 224, 239, .5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 180, 216, .12);
+        }
+
+        .feat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: rgba(0, 180, 216, .15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        .feat h3 {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .feat p {
+            font-size: 12.5px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ── Contact ── */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 36px;
+            animation: fadeUp .8s .7s ease both;
+        }
+
+        .contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 13px;
+            color: var(--text);
+            text-decoration: none;
+            transition: border-color .3s, color .3s, background .3s;
+        }
+
+        .contact a:hover {
+            border-color: var(--purple);
+            background: rgba(0, 180, 216, .12);
+            color: #fff;
+        }
+
+        .contact a svg {
+            opacity: .7;
+        }
+
+        /* ── Socials ── */
+        .socials {
+            display: flex;
+            gap: 12px;
+            animation: fadeUp .8s .8s ease both;
+        }
+
+        .socials a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 16px;
+            transition: border-color .3s, color .3s, transform .3s;
+        }
+
+        .socials a:hover {
+            border-color: var(--purple);
+            color: var(--purple-2);
+            transform: translateY(-2px);
+        }
+
+        /* ── Keyframes ── */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Footer ── */
+        .footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            padding: 0 20px 28px;
+            animation: fadeUp .8s .9s ease both;
+        }
+
+        @media (max-width: 480px) {
+            .cd-num {
+                font-size: 28px;
+            }
+
+            .cd-block {
+                padding: 16px 18px 12px;
+                min-width: 68px;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod
+                    ? n.callMethod.apply(n, arguments)
+                    : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "3228912560600188");
+        fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=3228912560600188&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <div class="grid-lines"></div>
+
+    <div class="wrap">
+
+        <!-- Brand -->
+        <div class="brand">
+            <div class="brand-icon">CP</div>
+            <div class="brand-text">
+                <span class="brand-name">Code Pro Agency</span>
+                <span class="brand-tag">Development &amp; Solutions</span>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            Đang bảo trì hệ thống
+        </div>
+
+        <!-- Heading -->
+        <div class="heading">
+            <h1>Chúng tôi đang<br /><span>nâng cấp hệ thống</span></h1>
+        </div>
+
+        <!-- Sub -->
+        <p class="sub">
+            <strong>Code Pro Agency</strong> sẽ sớm quay trở lại với diện mạo mới
+            và nhiều tính năng vượt trội hơn. Cảm ơn bạn đã kiên nhẫn chờ đợi!
+        </p>
+
+        <!-- Countdown -->
+        <div class="countdown">
+            <div class="cd-block">
+                <span class="cd-num" id="days">00</span>
+                <span class="cd-label">Ngày</span>
+            </div>
+            <div class="cd-block">
+                <span class="cd-num" id="hours">00</span>
+                <span class="cd-label">Giờ</span>
+            </div>
+            <div class="cd-block">
+                <span class="cd-num" id="minutes">00</span>
+                <span class="cd-label">Phút</span>
+            </div>
+            <div class="cd-block">
+                <span class="cd-num" id="seconds">00</span>
+                <span class="cd-label">Giây</span>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-wrap">
+            <div class="progress-head">
+                <span>Tiến độ hoàn thành</span>
+                <span>65%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-bar">
+                    <div class="progress-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features / Services -->
+        <div class="features">
+            <div class="feat">
+                <div class="feat-icon">🔍</div>
+                <h3>SEO Tổng thể</h3>
+                <p>Tối ưu từ khoá, on-page & off-page, đưa website lên top Google bền vững</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">📣</div>
+                <h3>Quảng cáo (Ads)</h3>
+                <p>Chạy Google Ads, Facebook Ads hiệu quả — tối ưu chi phí, tăng chuyển đổi</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">💬</div>
+                <h3>Chăm sóc Fanpage</h3>
+                <p>Quản lý nội dung, tương tác & xây dựng cộng đồng thương hiệu trên mạng xã hội</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">🌐</div>
+                <h3>Thiết kế Website</h3>
+                <p>Thiết kế & lập trình website chuẩn UI/UX, tốc độ cao, thân thiện SEO</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">🎨</div>
+                <h3>Thiết kế Thương hiệu</h3>
+                <p>Logo, bộ nhận diện thương hiệu, ấn phẩm truyền thông chuyên nghiệp</p>
+            </div>
+            <div class="feat">
+                <div class="feat-icon">📊</div>
+                <h3>Phân tích & Báo cáo</h3>
+                <p>Theo dõi hiệu suất, phân tích dữ liệu và tối ưu chiến lược liên tục</p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            <a href="/cdn-cgi/l/email-protection#dcb4b9b0b0b39cbfb3b8b9acaeb3f2aab2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span class="__cf_email__" data-cfemail="2c44494040436c4f4348495c5e43025a42">[email&#160;protected]</span>
+            </a>
+            <a href="tel:+84977977655">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                +84 977 977 655
+            </a>
+        </div>
+
+        <!-- Socials -->
+        <div class="socials">
+            <a href="https://www.facebook.com/codepro.official" target="_blank" rel="noopener" title="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+            </a>
+            <a href="https://github.com/codeprovn" title="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+            </a>
+            <a href="#" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+            </a>
+            <a href="https://zalo.me/0977977655" title="Zalo">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+            </a>
+        </div>
+
+    </div><!-- /wrap -->
+
+    <footer class="footer">
+        &copy; 2026 Code Pro Agency. All rights reserved.
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Countdown: target = 7 days from now (customisable)
+        const target = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+
+        function pad(n) { return String(n).padStart(2, '0'); }
+
+        function tick() {
+            const diff = target - Date.now();
+            if (diff <= 0) {
+                ['days', 'hours', 'minutes', 'seconds'].forEach(id => document.getElementById(id).textContent = '00');
+                return;
+            }
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            document.getElementById('days').textContent = pad(d);
+            document.getElementById('hours').textContent = pad(h);
+            document.getElementById('minutes').textContent = pad(m);
+            document.getElementById('seconds').textContent = pad(s);
+        }
+
+        tick();
+        setInterval(tick, 1000);
+    </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"8f7e922c29ed4eae89ca89724ed546ea","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+
+</html>
